@@ -8,7 +8,7 @@ const {
 
 const localH = `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/food`;
 
-const sequelize = new Sequelize(localH, {
+const sequelize = new Sequelize(DEPLOY_DB, {
   logging: false, // set to console.log to see the raw SQL queries
   native: false, // lets Sequelize know we can use pg-native for ~30% more speed
 });

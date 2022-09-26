@@ -23,7 +23,7 @@ const getDiets = require('./src/utils/getDiets.js');
 const port = process.env.PORT || 3001;
 
 // Syncing all the models at once.
-conn.sync({ force: true }).then(() => {  
+conn.sync({ force: false }).then(() => {  
   server.listen(port, () => {    
     getDiets();
     console.log(`Listening on port ${port}`); // eslint-disable-line no-console
