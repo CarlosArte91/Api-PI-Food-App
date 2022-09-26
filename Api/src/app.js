@@ -24,6 +24,8 @@ server.use((req, res, next) => {
 
 server.use('/api', routes);
 
+server.get("/api", (req, res) => res.send("Welcome to api food"));
+
 // Error catching endware.
 server.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
   const status = err.status || 500;
